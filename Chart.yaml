@@ -1,0 +1,7 @@
+apiVersion: v1
+name: flamescope-chart
+appVersion: "1.2"
+description: helm chart for netflix flamescope
+version: 0.1.0
+type: application
+icon: "https://raw.githubusercontent.com/Netflix/flamescope/master/app/public/favicon.ico"
