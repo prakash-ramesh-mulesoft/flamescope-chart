@@ -12,7 +12,7 @@ metadata:
   namespace: default
 spec:
   progressDeadlineSeconds: 600
-  replicas: 3
+  replicas: {{.Values.deployment.replica}}
   revisionHistoryLimit: 10
   selector:
     matchLabels:
