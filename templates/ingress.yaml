@@ -3,6 +3,8 @@ kind: Ingress
 metadata:
   name: my-ingress
   namespace: default
+  annotations:
+    kubernetes.io/ingress.class: ambassador
 spec:
   rules:
     - http:
