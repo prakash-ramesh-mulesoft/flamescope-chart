@@ -10,7 +10,7 @@ spec:
     - http:
         paths:
           - pathType: Prefix
-            path: "/argo"
+            path: "/"
             backend:
               serviceName: argocd-server
-              servicePort: 443
+              servicePort: 80
