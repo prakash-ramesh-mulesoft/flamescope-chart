@@ -9,7 +9,7 @@ spec:
   rules:
     - http:
         paths:
-          - path: "/"
+          - path: "/argo/"
             backend:
               serviceName: argocd-server
-              servicePort: 80
+              servicePort: 443
