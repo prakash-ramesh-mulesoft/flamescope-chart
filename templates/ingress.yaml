@@ -4,6 +4,7 @@ metadata:
   name: my-ingress
   annotations:
     argocd.argoproj.io/sync-options: Validate=false
+  namespace: default
 spec:
   rules:
     - http:
