@@ -5,6 +5,7 @@ metadata:
   namespace: default
   annotations:
     kubernetes.io/ingress.class: ambassador
+    argocd.argoproj.io/sync-options: Validate=false
 spec:
   rules:
     - http:
