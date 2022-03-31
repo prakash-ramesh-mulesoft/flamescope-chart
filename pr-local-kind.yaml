@@ -2,7 +2,7 @@ kind: Cluster
 apiVersion: kind.x-k8s.io/v1alpha4
 nodes:
 - role: control-plane
-  image: kindest/node:v1.17.5
+  image: kindest/node:v1.20.15
   kubeadmConfigPatches:
   - |
     kind: InitConfiguration
@@ -15,6 +15,18 @@ nodes:
     protocol: TCP
   - containerPort: 443
     hostPort: 443
+    protocol: TCP
+  - containerPort: 9200
+    hostPort: 9200
+    protocol: TCP
+  - containerPort: 5601
+    hostPort: 5601
+    protocol: TCP
+  - containerPort: 2333
+    hostPort: 2333
+    protocol: TCP
+  - containerPort: 8080
+    hostPort: 8080
     protocol: TCP
   # add a mount from /path/to/my/files on the host to /files on the node
   extraMounts:

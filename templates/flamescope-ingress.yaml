@@ -1,8 +1,8 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: argo-ingress
-  namespace: argocd
+  name: flamescope-ingress
+  namespace: app-ns
 spec:
   rules:
     - http:
@@ -11,6 +11,6 @@ spec:
             path: "/"
             backend:
               service:
-                name: argocd-server
+                name: flamescope-service
                 port:
-                  number: 443
+                  number: 5000
