@@ -9,10 +9,10 @@ metadata:
     app: {{.Values.name}}
     app.kubernetes.io/managed-by: Helm
   name: {{.Values.name}}
-  namespace: default
+  namespace: app-ns
 spec:
   progressDeadlineSeconds: 600
-  replicas: 1
+  replicas: {{.Values.replica}}
   revisionHistoryLimit: 10
   selector:
     matchLabels:
