@@ -3,17 +3,13 @@ kind: Deployment
 metadata:
   annotations:
     deployment.kubernetes.io/revision: "1"
-    meta.helm.sh/release-name: demo-flamescope
-    meta.helm.sh/release-namespace: app-ns
   labels:
     app: {{.Values.name}}
-    app.kubernetes.io/managed-by: Helm
   name: {{.Values.name}}
   namespace: app-ns
 spec:
   progressDeadlineSeconds: 600
   replicas: {{.Values.deployment.replica}}
-  revisionHistoryLimit: 10
   selector:
     matchLabels:
       app: {{.Values.name}}
